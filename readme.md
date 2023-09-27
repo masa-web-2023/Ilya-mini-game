@@ -3,6 +3,7 @@ Draw shield with your mouse to stop enemie ships from reaching the bottom of the
 
 ## Building
 > npm install
+
 > npm run build
 
 To run dev server use
