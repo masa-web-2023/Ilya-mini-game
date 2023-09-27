@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shield Draw</title>
+  <style>
+    .game-screen {
+      border-style: solid;
+      width: 500px;
+      height: 500px;
+      justify-items: center;
+      align-items: center;
+      user-select: none;
+      text-align: center;
+      font-family: sans-serif;
+    }
+
+    #startgame {
+      font-size: 500%;
+    }
+
+    #gameover {
+      font-size: 300%
+    }
+
+    html,
+    body {
+      width: 100vw;
+      height: 100vh;
+      margin: 0;
+      display: grid;
+      align-items: center;
+      justify-items: center;
+    }
+
+    .information-box {
+      #hitpoints {
+        float: left;
+      }
+
+      #score {
+        float: right;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="game">
+    <div class="game-screen" id="gameover" style="display:none">
+      GAME OVER <br>
+      YOUR SCORE: <span id="finalscore"></span>
+      <span id="again">AGAIN?</span>
+    </div>
+    <div class="game-screen" id="startgame" style="display:grid">
+      START
+    </div>
+    <canvas class="game-screen" id="gamecanvas" style="display:none"></canvas>
+    <div class="information-box">
+      <div id="hitpoints">
+        <span id="current-hitpoints">
+          100
+        </span>
+        /
+        <span id="max-hitpoints">
+          100
+        </span>
+      </div>
+      <div id="score">
+        0
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
