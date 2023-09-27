@@ -130,12 +130,12 @@ const handleMouseDown = (e: MouseEvent, drawingMatrix: boolean[][]) => {
   }
 
   gameCanvas.addEventListener(
-    "mousemove",
+    "pointermove",
     handleMouseMove
   )
   gameCanvas.addEventListener(
-    'mouseup',
-    () => gameCanvas.removeEventListener("mousemove", handleMouseMove),
+    'pointerup',
+    () => gameCanvas.removeEventListener("pointermove", handleMouseMove),
     { once: true }
   )
 }
@@ -221,11 +221,11 @@ const startGame = async () => {
   const enemyList = [] as Enemy[]
   const onMouseDown = (e: MouseEvent) => handleMouseDown(e, drawingMatrix)
   gameCanvas.addEventListener(
-    "mousedown",
+    "pointerdown",
     onMouseDown
   )
   cleanUp.push(() => gameCanvas.removeEventListener(
-    "mousedown",
+    "pointerdown",
     onMouseDown
   ))
 
